@@ -1,0 +1,3 @@
+#export PATH="/home/spark/docker/spark/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/spark/NASDrive/hadoop/bin:/home/spark/NASDrive/hadoop/sbin:/home/spark/NASDrive/hadoop/bin:/home/spark/NASDrive/hadoop/sbin"
+
+spark-submit --master k8s://https://10.129.6.16:6443 --deploy-mode cluster --properties-file /home/mayur/MTP/automateBigDL/MTP2/jobrun/properties.conf  --class com.intel.analytics.bigdl.models.mymodel.Train hdfs://10.129.2.179:9000/jars/BigDL/bigdl-SPARK_2.0-0.13.0-SNAPSHOT-jar-with-dependencies_file6.jar -f hdfs://10.129.2.179:9000/input-data/MNIST/MNIST_60000 -b 2000 -e 1
